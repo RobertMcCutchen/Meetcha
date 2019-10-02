@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StyleSheet, Text, View, Button} from 'react-native';
 
 export default function App() {
-  const [outputText, setOutputText] = useState('Open up App.js to start working on your app!')
   return (
     <View style={styles.container}>
-      <Text>{ outputText }</Text>
-      <Button title="Change Text" onPress={() => setOutputText('The text changed!')}/>
+      <Text style={styles.title}>Meetcha!</Text>
+      <Button title="Change Text"/>
     </View>
   );
 }
@@ -14,8 +13,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'green',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  title: {
+    color: 'yellow',
+    fontSize: 90,
+    fontStyle: "italic"
+  }
 });
